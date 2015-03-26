@@ -9907,3 +9907,818 @@ ArgumentError (wrong number of arguments (0 for 1)):
   Rendered /Users/jordan/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/jordan/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/jordan/.gem/ruby/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (63.6ms)
+
+
+Started GET "/" for ::1 at 2015-03-26 18:24:24 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "questions"[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 44ms (Views: 38.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:24:24 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:24:24 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:24:24 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:24:24 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:24:24 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:24:24 -0400
+
+
+Started GET "/questions/3/answers" for ::1 at 2015-03-26 18:24:27 -0400
+Processing by AnswersController#index as HTML
+  Parameters: {"question_id"=>"3"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE (question_id = 3)[0m
+  Rendered answers/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 32ms (Views: 28.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:24:27 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:24:27 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:24:27 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:24:27 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:24:27 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:24:27 -0400
+
+
+Started GET "/questions/3/answers/new" for ::1 at 2015-03-26 18:24:29 -0400
+Processing by AnswersController#new as HTML
+  Parameters: {"question_id"=>"3"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered answers/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 39ms (Views: 36.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:24:29 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:24:29 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:24:29 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:24:29 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:24:29 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:24:29 -0400
+
+
+Started POST "/questions/3/answers" for ::1 at 2015-03-26 18:24:42 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CkycpjQqaZlYhPBqc7uEUhbEOZSqbGm+9QBb7b8fTntgCDdklMIOLCPtLiKlebucwWZSylY15kisbHrWU2+www==", "answer"=>{"description"=>"dasofjdosajfaosjsfojweofijwoeifjwoiejfowiejfoiwejfowejfoijwefoijweoifjweofijweofjweofjweoifjweoijfweojfweoi"}, "commit"=>"Create Answer", "question_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("description", "user_id", "question_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "dasofjdosajfaosjsfojweofijwoeifjwoiejfowiejfoiwejfowejfoijwefoijweoifjweofijweofjweofjweoifjweoijfweojfweoi"], ["user_id", 1], ["question_id", 3], ["created_at", "2015-03-26 22:24:42.824446"], ["updated_at", "2015-03-26 22:24:42.824446"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions/3/answers
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/questions/3/answers" for ::1 at 2015-03-26 18:24:42 -0400
+Processing by AnswersController#index as HTML
+  Parameters: {"question_id"=>"3"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE (question_id = 3)
+  Rendered answers/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:24:42 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:24:42 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:24:42 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:24:42 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:24:42 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:24:42 -0400
+
+
+Started DELETE "/questions/3" for ::1 at 2015-03-26 18:25:05 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Pa7rWWWEd6BUnChNp/WdYE4mCQ8G9La3CUCKyFgFIp1X6kCbxWwQFS/19gVxN6KumYRiUfqtOUFQLKvztHXcJQ==", "id"=>"3"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE (question_id = 3)[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/questions" for ::1 at 2015-03-26 18:25:05 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "questions"[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 31ms (Views: 30.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:25:05 -0400
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:25:05 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:25:05 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:25:05 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:25:05 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:25:05 -0400
+
+
+Started GET "/questions/4/answers" for ::1 at 2015-03-26 18:28:53 -0400
+Processing by AnswersController#index as HTML
+  Parameters: {"question_id"=>"4"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE (question_id = 4)[0m
+  Rendered answers/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:28:53 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:28:53 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:28:53 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:28:53 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:28:53 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:28:53 -0400
+
+
+Started GET "/questions/2/answers" for ::1 at 2015-03-26 18:29:00 -0400
+Processing by AnswersController#index as HTML
+  Parameters: {"question_id"=>"2"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE (question_id = 2)[0m
+  Rendered answers/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:29:00 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:29:00 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:29:00 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:29:00 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:29:00 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:29:00 -0400
+
+
+Started GET "/questions/1/answers" for ::1 at 2015-03-26 18:29:03 -0400
+Processing by AnswersController#index as HTML
+  Parameters: {"question_id"=>"1"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE (question_id = 1)[0m
+  Rendered answers/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:29:03 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:29:03 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:29:03 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:29:03 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:29:03 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:29:03 -0400
+
+
+Started GET "/questions/4/answers" for ::1 at 2015-03-26 18:29:05 -0400
+Processing by AnswersController#index as HTML
+  Parameters: {"question_id"=>"4"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE (question_id = 4)[0m
+  Rendered answers/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:29:05 -0400
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:29:05 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:29:05 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:29:05 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:29:05 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:29:05 -0400
+
+
+Started GET "/questions" for ::1 at 2015-03-26 18:31:25 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions"
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:31:25 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:31:25 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:31:25 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:31:25 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:31:25 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:31:25 -0400
+
+
+Started GET "/questions" for ::1 at 2015-03-26 18:39:40 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "questions"[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:39:40 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:39:40 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:39:40 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:39:40 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:39:40 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:39:40 -0400
+
+
+Started GET "/questions/new" for ::1 at 2015-03-26 18:39:42 -0400
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 33ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:39:42 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:39:42 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:39:42 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:39:42 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:39:42 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:39:43 -0400
+
+
+Started POST "/questions" for ::1 at 2015-03-26 18:40:08 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MFawLHTUL//EdQK2o+o6BD4BcDhmgix9N2o+y6oJRkxaEhvu1DxISr8c3P51KAXK6aMbZprbo4tuBh/wRnm49A==", "question"=>{"title"=>"This is my question that is newwwwwwwwwwwwwwww", "description"=>"Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah", "user_id"=>""}, "commit"=>"Create Question"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("title", "description", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "This is my question that is newwwwwwwwwwwwwwww"], ["description", "Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah"], ["user_id", 1], ["created_at", "2015-03-26 22:40:08.121872"], ["updated_at", "2015-03-26 22:40:08.121872"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/questions/5/answers
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/questions/5/answers" for ::1 at 2015-03-26 18:40:08 -0400
+Processing by AnswersController#index as HTML
+  Parameters: {"question_id"=>"5"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mAnswer Load (0.9ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE (question_id = 5)[0m
+  Rendered answers/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:40:08 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:40:08 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:40:08 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:40:08 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:40:08 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:40:08 -0400
+
+
+Started GET "/questions/5/answers/new" for ::1 at 2015-03-26 18:40:12 -0400
+Processing by AnswersController#new as HTML
+  Parameters: {"question_id"=>"5"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered answers/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:40:12 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:40:12 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:40:12 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:40:12 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:40:12 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:40:12 -0400
+
+
+Started POST "/questions/5/answers" for ::1 at 2015-03-26 18:40:27 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WyG00PbfbnhDDHdBH+7rKcLL2QbgfNNvP5AvAyVOGjwxZR8SVjcJzThlqQnJLNTnFWmyWBwlXJlm/A44yT7khA==", "answer"=>{"description"=>"Answerssssssssssssssssssssssss"}, "commit"=>"Create Answer", "question_id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/questions/5/answers/new?
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/questions/5/answers/new" for ::1 at 2015-03-26 18:40:27 -0400
+Processing by AnswersController#new as HTML
+  Parameters: {"question_id"=>"5"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered answers/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:40:28 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:40:28 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:40:28 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:40:28 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:40:28 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:40:28 -0400
+
+
+Started POST "/questions/5/answers" for ::1 at 2015-03-26 18:40:42 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YDI+zvW2vCYO2MACEa2mq+B8UiXtSgEWXx+WL5Xx2ioKdpUMVV7bk3WxHkrHb5llN945exETjuAGc7cUeYEkkg==", "answer"=>{"description"=>"This is an answer.This is an answer.This is an answer.This is an answer.This is an answer.This is an answer.This is an answer.This is an answer."}, "commit"=>"Create Answer", "question_id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("description", "user_id", "question_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "This is an answer.This is an answer.This is an answer.This is an answer.This is an answer.This is an answer.This is an answer.This is an answer."], ["user_id", 1], ["question_id", 5], ["created_at", "2015-03-26 22:40:42.391458"], ["updated_at", "2015-03-26 22:40:42.391458"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions/5/answers
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/questions/5/answers" for ::1 at 2015-03-26 18:40:42 -0400
+Processing by AnswersController#index as HTML
+  Parameters: {"question_id"=>"5"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE (question_id = 5)
+  Rendered answers/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:40:42 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:40:42 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:40:42 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:40:42 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:40:42 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:40:42 -0400
+
+
+Started GET "/questions/5/edit" for ::1 at 2015-03-26 18:40:50 -0400
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered questions/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:40:50 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:40:50 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:40:50 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:40:50 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:40:50 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:40:50 -0400
+
+
+Started PATCH "/questions/5" for ::1 at 2015-03-26 18:41:00 -0400
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0KbOSbYV9huXND3NCiJ5yYIerlp+Uy723+y/w5wgjya64mWLFv2Rruxd44Xc4EYHVbzFBIIKoQCGgJ74cFBxng==", "question"=>{"title"=>"This is my question that is newwwwwwwwwwwwwwwwQQQQQ", "description"=>"Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBsdalfjdsaljlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah", "user_id"=>"1"}, "commit"=>"Repost Question", "id"=>"5"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "questions" SET "title" = $1, "description" = $2, "updated_at" = $3 WHERE "questions"."id" = $4[0m  [["title", "This is my question that is newwwwwwwwwwwwwwwwQQQQQ"], ["description", "Blah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blahBsdalfjdsaljlah blah blahBlah blah blahBlah blah blahBlah blah blahBlah blah blah"], ["updated_at", "2015-03-26 22:41:00.777796"], ["id", 5]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions/5/answers
+Completed 302 Found in 8ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/questions/5/answers" for ::1 at 2015-03-26 18:41:00 -0400
+Processing by AnswersController#index as HTML
+  Parameters: {"question_id"=>"5"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE (question_id = 5)
+  Rendered answers/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:41:00 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:41:00 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:41:00 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:41:00 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:41:00 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:41:00 -0400
+
+
+Started GET "/questions" for ::1 at 2015-03-26 18:41:17 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "questions"[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:41:17 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:41:17 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:41:17 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:41:17 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:41:17 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:41:17 -0400
+
+
+Started GET "/questions/4/answers" for ::1 at 2015-03-26 18:41:19 -0400
+Processing by AnswersController#index as HTML
+  Parameters: {"question_id"=>"4"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE (question_id = 4)[0m
+  Rendered answers/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:41:19 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:41:19 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:41:19 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:41:19 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:41:19 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:41:19 -0400
+
+
+Started GET "/questions" for ::1 at 2015-03-26 18:41:21 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "questions"
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:41:21 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:41:21 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:41:21 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:41:21 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:41:21 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:41:21 -0400
+
+
+Started GET "/questions/2/answers" for ::1 at 2015-03-26 18:41:23 -0400
+Processing by AnswersController#index as HTML
+  Parameters: {"question_id"=>"2"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE (question_id = 2)
+  Rendered answers/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:41:23 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:41:23 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:41:23 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:41:23 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:41:23 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:41:23 -0400
+
+
+Started GET "/questions" for ::1 at 2015-03-26 18:41:28 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "questions"[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:41:29 -0400
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:41:29 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:41:29 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:41:29 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:41:29 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:41:29 -0400
+
+
+Started GET "/questions/4/answers" for ::1 at 2015-03-26 18:41:30 -0400
+Processing by AnswersController#index as HTML
+  Parameters: {"question_id"=>"4"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE (question_id = 4)[0m
+  Rendered answers/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:41:30 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:41:30 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:41:30 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:41:30 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:41:30 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:41:30 -0400
+
+
+Started DELETE "/questions/4" for ::1 at 2015-03-26 18:41:31 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BWavrMIn6W6yd2E6W8QNnoSRuN0Y4qpIHQ1DI+dPk5lvIgRuYs+O28kev3KNBjJQUzPTg+S7Jb5EYWIYCz9tIQ==", "id"=>"4"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 4]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE (question_id = 4)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 4ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/questions" for ::1 at 2015-03-26 18:41:31 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "questions"
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:41:32 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:41:32 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:41:32 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:41:32 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:41:32 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:41:32 -0400
+
+
+Started GET "/questions" for ::1 at 2015-03-26 18:45:01 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "questions"[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered questions/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:45:01 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:45:01 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:45:01 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:45:01 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:45:01 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:45:01 -0400
+
+
+Started GET "/questions" for ::1 at 2015-03-26 18:53:17 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "questions"
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."id" DESC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questions/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 43ms (Views: 36.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/normalize-10efdac8d54129dd15a139392fd76d8d.css?body=1" for ::1 at 2015-03-26 18:53:17 -0400
+
+
+Started GET "/assets/foundation.min-142460129948c3d43f04103d94e9bad3.css?body=1" for ::1 at 2015-03-26 18:53:17 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 18:53:17 -0400
+
+
+Started GET "/assets/application-378c8739237292dbbedfcfe67f3185f0.js?body=1" for ::1 at 2015-03-26 18:53:17 -0400
+
+
+Started GET "/assets/application-c754ef3b667de34dc15da0e7481fba73.css?body=1" for ::1 at 2015-03-26 18:53:17 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 18:53:17 -0400
